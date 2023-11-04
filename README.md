@@ -17,7 +17,7 @@ The physics dynamics has been implemented in the neural network with a timespati
   - (𝑥, 𝑦) = (𝑋, 𝑌) − 𝑇 (𝑋0, 𝑌0, 𝑣, 𝜃, 𝑡)
 - The local pixel depends on meteor dynamics and it is used as input in the second implicit neural representation, making the model based on the physics of the signal. The output of the second neural representation represents the signal itself and is summed over the background photon counts. 
 
-# Python scrits
+# Python scripts
 - odenet_pytorch.py #pytorch architecture and libraries
 - odenet_tuning.py #hyperparameter tuning
 - odenet_training.py #training of whole dataset
