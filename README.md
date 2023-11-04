@@ -13,8 +13,8 @@ The neural network performs a regression by mapping a pixel coordinate to the Mi
 The physics dynamics has been implemented in the neural network with a timespatial transformation 𝑇 acting on two separate implicit neural representations. 
 - The global pixel coordinates (𝑋, 𝑌) are used as input for the first neural representation, returning the background photon counts.
 - Then, the pixel coordinates are mapped by function 𝑇 to local reference frame (𝑥, 𝑦) of the meteor through its kinematics. The meteor starts moving in the first frame at pixel (𝑋0, 𝑌0) at time 𝑡 = 0. In the following frames, 𝑡 = 1, ..., 10, the meteor position is determined by its apparent speed 𝑣 in x-axis and y-axis: 
--- 𝑇 (𝑋0, 𝑌0, 𝑣, 𝜃, 𝑡) = (𝑋0 + 𝑣 cos(𝜃) 𝑡, 𝑌0 + 𝑣 sin(𝜃) 𝑡)
--- (𝑥, 𝑦) = (𝑋, 𝑌) − 𝑇 (𝑋0, 𝑌0, 𝑣, 𝜃, 𝑡)
+  - 𝑇 (𝑋0, 𝑌0, 𝑣, 𝜃, 𝑡) = (𝑋0 + 𝑣 cos(𝜃) 𝑡, 𝑌0 + 𝑣 sin(𝜃) 𝑡)
+  - (𝑥, 𝑦) = (𝑋, 𝑌) − 𝑇 (𝑋0, 𝑌0, 𝑣, 𝜃, 𝑡)
 - The local pixel depends on meteor dynamics and it is used as input in the second implicit neural representation, making the model based on the physics of the signal. The output of the second neural representation represents the signal itself and is summed over the background photon counts. 
 
 # Python scrits
